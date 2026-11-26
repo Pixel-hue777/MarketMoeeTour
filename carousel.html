@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>☀★☆ PILIPINAS CAROUSEL ☆★☀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fredoka', 'Segoe UI', Arial, sans-serif;
+      text-align: center;
+
+      background-color: #EAE2B7;
+      background-image: radial-gradient(circle at top, #EAE2B7 60%, #FCBF49 140%);
+      background-attachment: fixed;
+      margin: 0;
+      padding: 20px;
+      color: #003049;
+    }
+
+    h1 {
+
+      color: #003049;
+      font-size: 2.5rem;
+      text-shadow: 3px 3px 0px #FCBF49;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      color: #D62828;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .carousel-container {
+
+      background-color: #003049;
+      padding: 20px;
+      display: inline-block;
+      border-radius: 25px;
+      border: 4px dashed #FCBF49;
+      box-shadow: 0 10px 20px rgba(0, 48, 73, 0.25);
+    }
+
+    img {
+      width: 500px;
+      max-width: 100%;
+      height: 300px;
+      object-fit: cover;
+
+      border: 8px solid #EAE2B7;
+      border-radius: 20px;
+      transition: 0.4s ease;
+      filter: none;
+      display: block;
+      margin: 0 auto;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      border-color: #FCBF49;
+    }
+
+    .button-group {
+      margin: 22px 0;
+    }
+
+    button {
+      font-family: 'Fredoka', 'Segoe UI', Arial, sans-serif;
+      padding: 12px 22px;
+      margin: 6px;
+      cursor: pointer;
+      background-color: #D62828;
+      color: #EAE2B7;
+      border: none;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 0 #003049;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #F77F00;
+      color: #003049;
+      box-shadow: 0 4px 0 #003049;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #003049;
+    }
+
+
+    .filter-buttons button {
+      background-color: #FCBF49;
+      color: #003049;
+      border: 2px solid #F77F00;
+      box-shadow: 0 4px 0 #F77F00;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #003049;
+      color: #FCBF49;
+      border-color: #D62828;
+      box-shadow: 0 4px 0 #D62828;
+    }
+
+    .filter-buttons button:active {
+      box-shadow: 0 2px 0 #D62828;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>☀★☆ PILIPINAS DESTINATIONS ☆★☀</h1>
+  <div class="subtitle">Mabuhay! Explore the beauty of the islands 🌴</div>
+
+  <div class="carousel-container">
+
+    <img id="gallery" src="https://i.pinimg.com/736x/eb/30/06/eb3006fb989564be3fc9ca5fb1e933dd.jpg" alt="Philippine Destination">
+  </div>
+
+  <div class="button-group">
+
+    <button onclick="document.getElementById('gallery').src='https://i.pinimg.com/1200x/7c/bd/83/7cbd83e12015a58a5de0dd501a3be580.jpg'">1. PARK 🌳</button>
+    <button onclick="document.getElementById('gallery').src='https://i.pinimg.com/1200x/cc/00/5f/cc005f8e542470f32aed62b14ba39673.jpg'">2. INTRAMUROS 🏰</button>
+    <button onclick="document.getElementById('gallery').src='https://i.pinimg.com/1200x/27/68/c1/2768c1ceb90693800ee2180ddbd2a09a.jpg'">3. PROBINSYA 🌋</button>
+    <button onclick="document.getElementById('gallery').src='https://i.pinimg.com/736x/8a/19/2e/8a192eedc76e0e99fe1d47523af9636e.jpg'">4. WATAWAT 🇵🇭</button>
+  </div>
+
+  <div class="button-group filter-buttons">
+    <button onclick="document.getElementById('gallery').style.filter='blur(5px)'">BLUR 🌊</button>
+    <button onclick="document.getElementById('gallery').style.filter='grayscale(100%)'">NOIR 🏛️</button>
+    <button onclick="document.getElementById('gallery').style.filter='brightness(140%)'">ARAW (BRIGHT) ☀️</button>
+    <button onclick="document.getElementById('gallery').style.filter='sepia(100%)'">LUMANG LITRATO 📜</button>
+    <button onclick="document.getElementById('gallery').style.filter='none'">NORMAL ✨</button>
+  </div>
+
+</body>
+</html>

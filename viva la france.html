@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google Map</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background-color: #EAE2B7; /* Lemon Meringue / Soft Cream */
+            margin: 0;
+            padding: 40px 20px;
+            color: #003049; /* Prussian Blue / Deep Navy */
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 4px;
+            color: #D62828; /* Crimson / Bright Red */
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 0px #FCBF49; /* Golden Amber / Marigold highlight */
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #F77F00; /* Tangerine / Vivid Orange */
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .map-container {
+            display: inline-block;
+            background-color: #FFFFFF;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 48, 73, 0.2); /* Deep Navy shadow */
+            border: 3px solid #FCBF49; /* Golden Amber / Marigold border */
+            margin-bottom: 30px;
+        }
+
+        iframe {
+            border: none;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .button-container {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #003049; /* Prussian Blue / Deep Navy */
+            color: #EAE2B7; /* Lemon Meringue / Soft Cream */
+            border: 2px solid #003049;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: 'Georgia', serif;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 48, 73, 0.15);
+        }
+
+        button:hover {
+            background-color: #D62828; /* Crimson / Bright Red */
+            color: #EAE2B7; /* Lemon Meringue / Soft Cream */
+            border-color: #F77F00; /* Tangerine / Vivid Orange */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(214, 40, 40, 0.25);
+        }
+
+        button:active {
+            background-color: #F77F00; /* Tangerine / Vivid Orange */
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>▀▄▀▄▀▄PHILIPINES▀▄▀▄▀▄</h1>
+    <h2 id="location-title">Philipines</h2>
+
+    <div class="map-container">
+        <iframe id="googlemap" src="https://i.pinimg.com/736x/c1/a5/b4/c1a5b4cd3fc5ac9ef52ab4fbfef1795f.jpg" width="600" height="400" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="button-container">
+        <button onclick="updateMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.9428402730055!2d123.69857337585914!3d13.166004010584858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a106b15e773841%3A0xf545870b1b897dd9!2sCagsawa%20Ruins!5e0!3m2!1sen!2sph!4v1794449392830!5m2!1sen!2sph', 'Cagsawa Ruins')">CAGSAWA RUINS</button>
+        <button onclick="updateMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31450.91666130416!2d124.12496635951803!3d9.819714714763084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aa16f89932b4ed%3A0xf893a780df0b83b0!2sChocolate%20Hills%20Complex!5e0!3m2!1sen!2sph!4v1794449505370!5m2!1sen!2sph', 'Chocolate Hills')">CHOCOLATE HILLA</button>
+        <button onclick="updateMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.813491574066!2d121.13382302590412!3d16.9344898156927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3390283d6532de53%3A0x9e3aa754850e375f!2sBatad%20Rice%20Terraces!5e0!3m2!1sen!2sph!4v1794449635156!5m2!1sen!2sph', 'Rice Terraces')">RICE TERRACES</button>
+        <button onclick="updateMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7722.346360325108!2d120.969246644803!3d14.589205726513466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca3d1375e1fb%3A0x49ebfa658c0ba08!2sIntramuros%2C%20Manila%2C%201002%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1794449741945!5m2!1sen!2sph', 'Intramuros')">INTRAMUROS</button>
+        <button onclick="updateMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251542.6970490486!2d125.89455103110701!3d9.904392123217209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3304043652d9e9b3%3A0xd4c56a60c9a11b84!2sSiargao%20Island!5e0!3m2!1sen!2sph!4v1794449837908!5m2!1sen!2sph', 'Sirgao Islands')">SIRGAO ISLANDS</button>
+        <button onclick="updateMap('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2012096.032263719!2d117.79054593680124!3d9.944351854430987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33b5bce750b99e45%3A0xdfc65f6c0c8d3beb!2sPalawan!5e0!3m2!1sen!2sph!4v1794449914410!5m2!1sen!2sph', 'Pawalan')">PALAWAN</button>
+    </div>
+
+    <script>
+        function updateMap(url, title) {
+            document.getElementById('googlemap').src = url;
+            document.getElementById('location-title').innerText = title;
+        }
+    </script>
+
+</body>
+</html>

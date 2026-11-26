@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>☀ Zoe's Philippine Cultural Tour Guide ☀</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+ 
+  body {
+    background-color: #FAF3E0;
+    background-image: 
+      repeating-linear-gradient(45deg, rgba(212, 163, 115, 0.12) 0px, rgba(212, 163, 115, 0.12) 10px, transparent 10px, transparent 20px),
+      repeating-linear-gradient(-45deg, rgba(0, 56, 168, 0.06) 0px, rgba(0, 56, 168, 0.06) 10px, transparent 10px, transparent 20px);
+    color: #2B1E16;
+    font-family: 'Georgia', serif;
+    line-height: 1.7;
+    padding: 0 0 50px 0;
+  }
+
+
+  .fiesta-banner {
+    background: linear-gradient(90deg, #0038A8 0%, #0038A8 45%, #FCD116 50%, #CE1126 55%, #CE1126 100%);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 12px 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    border-bottom: 4px solid #FCD116;
+  }
+
+  .main-wrapper {
+    max-width: 1050px;
+    margin: 35px auto;
+    padding: 0 20px;
+  }
+
+ 
+  .header-plaque {
+    background: #FFFDF9;
+    border: 4px solid #0038A8;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(43, 30, 22, 0.12);
+    margin-bottom: 35px;
+    overflow: hidden;
+  }
+
+  .header-plaque::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+      90deg,
+      #CE1126,
+      #CE1126 20px,
+      #FCD116 20px,
+      #FCD116 40px,
+      #0038A8 40px,
+      #0038A8 60px
+    );
+  }
+
+  .baybayin-accent {
+    color: #CE1126;
+    font-size: 22px;
+    letter-spacing: 8px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 36px;
+    color: #0038A8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px #FCD116;
+    margin-bottom: 8px;
+  }
+
+  .subtitle-tag {
+    display: inline-block;
+    background-color: #CE1126;
+    color: #FFFDF9;
+    padding: 5px 18px;
+    border-radius: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+  }
+
+
+  .layout-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+
+  /* Left Column: Capiz Shell & Barong Embroidery Guide Card */
+  .guide-sidebar {
+    background: rgba(255, 253, 249, 0.92);
+    border: 3px solid #D4A373;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+
+  /* Barong Tagalog Callado Lace Border Effect */
+  .embroidery-frame {
+    border: 2px dashed #B5835A;
+    border-radius: 14px;
+    padding: 20px 15px;
+    background: linear-gradient(180deg, #FFFDF9 0%, #F7EDE2 100%);
+  }
+
+  .profile-img {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #FCD116;
+    outline: 4px solid #CE1126;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin-bottom: 18px;
+    transition: transform 0.35s ease;
+  }
+
+  .profile-img:hover {
+    transform: scale(1.05) rotate(3deg);
+  }
+
+  .mabuhay-badge {
+    background: #0038A8;
+    color: #FCD116;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #CE1126;
+  }
+
+  .guide-sidebar p {
+    font-size: 14.5px;
+    color: #3D2B1F;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .highlight-callout {
+    background-color: #FCD116;
+    color: #2B1E16;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    border: 2px solid #CE1126;
+    margin-top: 10px;
+  }
+
+
+  .destinations-section {
+    background: #FFFDF9;
+    border: 3px solid #0038A8;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px double #D4A373;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+
+  .section-header h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #CE1126;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .sun-emblem {
+    font-size: 28px;
+    color: #FCD116;
+    text-shadow: 1px 1px 2px #CE1126;
+  }
+
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  .island-card {
+    background: #FAF3E0;
+    border-radius: 14px;
+    padding: 20px 24px;
+    border: 2px solid #E6CCB2;
+    border-left: 10px solid #0038A8;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+
+  .island-card:nth-child(even) {
+    border-left-color: #CE1126;
+  }
+
+  .island-card:nth-child(3) {
+    border-left-color: #FCD116;
+  }
+
+  .island-card:hover {
+    transform: translateX(6px);
+    background: #FFFDF9;
+    box-shadow: 0 6px 16px rgba(0, 56, 168, 0.15);
+  }
+
+  .island-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #B5835A;
+    padding-bottom: 6px;
+  }
+
+  .island-title {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: #0038A8;
+    letter-spacing: 1px;
+  }
+
+  .island-card:nth-child(even) .island-title {
+    color: #CE1126;
+  }
+
+  .route-tag {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 11px;
+    background: #2B1E16;
+    color: #FCD116;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .island-desc {
+    font-size: 14.5px;
+    color: #2B1E16;
+    text-align: justify;
+  }
+
+  .cultural-footer {
+    margin-top: 40px;
+    text-align: center;
+    background: #0038A8;
+    color: #FFFDF9;
+    padding: 22px;
+    border-radius: 16px;
+    border-top: 6px solid #FCD116;
+    border-bottom: 6px solid #CE1126;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+
+  .cultural-footer .credits {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .cultural-footer .motifs {
+    color: #FCD116;
+    letter-spacing: 6px;
+    font-size: 18px;
+  }
+
+
+  @media (max-width: 820px) {
+    .layout-grid {
+      grid-template-columns: 1fr;
+    }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="fiesta-banner">
+    ☀ PILIPINAS KONG MAHAL • PEARLS OF THE ORIENT SEAS ☀
+  </div>
+
+  <div class="main-wrapper">
+
+    <header class="header-plaque">
+      <div class="baybayin-accent">ᜋᜊᜓᜑᜌ᜔ • ☀ • ᜉᜒᜎᜒᜉᜒᜈᜐ᜔</div>
+      <h1>Zoe's Tour Guide Resume</h1>
+      <span class="subtitle-tag">DISCOVER THE HEART & ISLANDS OF THE PHILIPPINES</span>
+    </header>
+
+
+    <div class="layout-grid">
+
+      <aside class="guide-sidebar">
+        <div class="embroidery-frame">
+          <img src="https://i.pinimg.com/736x/1f/b4/ce/1fb4ce8a335c0c7952ac96a8a23db57a.jpg" alt="Profile image" class="profile-img">
+          
+          <div class="mabuhay-badge">☀ MABUHAY! WELCOME ☀</div>
+          
+          <p>Hello! My name is <strong>Zoe Lacuesta</strong>! Your TOUR GUIDE!!!! ♡</p>
+          
+          <p>I have lived in <strong>Mandaluyong City, Philippines</strong>, my entire life. I am currently studying at <strong>Colegio De Sta. Rosa Makati</strong>, where I am pursuing my goal of becoming a 2D animator.</p>
+          
+          <p>My goal for you all is to have fun, relaxing, and <strong>MEMORABLE</strong> days in the Philippines!! And I sure hope you all listen very well!</p>
+          
+          <div class="highlight-callout">
+            HERE ARE OUR FEATURED DESTINATIONS! ☀
+          </div>
+        </div>
+      </aside>
+
+
+      <main class="destinations-section">
+        <div class="section-header">
+          <h2>TOP PHILIPPINE ISLANDS</h2>
+          <span class="sun-emblem">☀ ★ ☀</span>
+        </div>
+
+        <div class="cards-grid">
+
+          <article class="island-card">
+            <div class="island-header">
+              <h3 class="island-title">🌊 SIARGAO ISLAND</h3>
+              <span class="route-tag">Mindanao • Surfing Capital</span>
+            </div>
+            <p class="island-desc">
+              Known as the Surfing Capital of the Philippines, Siargao invites thrill-seekers to ride the world-famous barrel waves of Cloud 9. Beyond surfing, you can explore enchanting emerald lagoons, swing from coconut palms into crystal-clear rivers, and hop between untouched white-sand islets. Its laid-back island vibe and warm local hospitality make it the ultimate tropical escape for adventure lovers!
+            </p>
+          </article>
+
+
+          <article class="island-card">
+            <div class="island-header">
+              <h3 class="island-title">🏝️ PALAWAN</h3>
+              <span class="route-tag">Luzon • Last Frontier</span>
+            </div>
+            <p class="island-desc">
+                Repeatedly voted one of the most beautiful islands in the world, Palawan boasts towering limestone cliffs and hidden turquoise lagoons. You can kayak through the secret coves of El Nido, snorkel over historic shipwrecks in Coron, or cruise down the awe-inspiring Puerto Princesa Underground River. Every corner of this paradise feels like stepping straight into a vibrant postcard!
+                </p>
+                </article>
+
+                   <article class="island-card">
+            <div class="island-header">
+              <h3 class="island-title">⛰️ BOHOL</h3>
+              <span class="route-tag">Visayas • Natural Wonders</span>
+            </div>
+            <p class="island-desc">
+              Bohol is home to the iconic Chocolate Hills, where over a thousand cone-shaped mounds turn a rich cocoa brown during the dry season. Visitors can also meet the tiny, wide-eyed Philippine tarsiers in lush sanctuaries and enjoy a scenic floating restaurant cruise along the Loboc River. With Panglao’s white beaches just minutes away, Bohol blends natural wonders with relaxing coastal charm!
+                </p>
+                </article>
+
+                  <article class="island-card">
+            <div class="island-header">
+              <h3 class="island-title">🏖️ BORACAY</h3>
+              <span class="route-tag">Visayas • White Beachs</span>
+            </div>
+            <p class="island-desc">
+            Famous for its four-kilometer stretch of powdery White Beach, Boracay offers sand so soft and cool it feels like walking on clouds. By day, you can go parasailing over turquoise waters or try paddleboarding along the calm shoreline. By night, the island comes alive with golden sunsets, beachfront dining, and vibrant island music!
+                </p>
+                </article>
+
+                      <article class="island-card">
+            <div class="island-header">
+              <h3 class="island-title">✨ SIQUIJOR</h3>
+              <span class="route-tag">Visayas • Island of Fire</span>
+            </div>
+            <p class="island-desc">
+          Famed for its mystical charm and untouched natural beauty, Siquijor is a tranquil island of cascading waterfalls and centuries-old balete trees. You can swim in the tiered turquoise pools of Cambugahay Falls, explore marine sanctuaries teeming with sea turtles, and unwind on quiet white-sand beaches. Its peaceful atmosphere and enchanting folklore make it a truly magical getaway!
+                </p>
+                </article>
+
+                <h1>Made with ♡ by Zoe Lacuesta
+☀ ★ ☀ ᜋᜊᜓᜑᜌ᜔ ☀ ★ ☀</h1>
+
+</html>
+</body>
+</head>
+</style>

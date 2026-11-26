@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Philippines Tour - Contact Information</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 450px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        h3 {
+            margin-top: 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0038a8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ce1126;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thank You for Touring the Philippines! 🇵🇭</h1>
+    <p>Please leave your contact details so we can stay in touch.</p>
+
+    <form id="philippinesTourForm">
+        <!-- Favorite Destination Section -->
+        <div class="section">
+            <h3>Favorite Destination Visited</h3>
+            
+            <input type="radio" id="palawan" name="destination" value="palawan">
+            <label for="palawan">El Nido & Coron, Palawan 🏝️</label>
+            <br><br>
+
+            <input type="radio" id="boracay" name="destination" value="boracay">
+            <label for="boracay">Boracay Island 🌊</label>
+            <br><br>
+
+            <input type="radio" id="cebu" name="destination" value="cebu">
+            <label for="cebu">Cebu & Bohol 🐋</label>
+            <br><br>
+
+            <input type="radio" id="siargao" name="destination" value="siargao">
+            <label for="siargao">Siargao Island 🏄</label>
+            <br><br>
+
+            <input type="radio" id="baguio" name="destination" value="baguio">
+            <label for="baguio">Baguio & Sagada 🌲</label>
+            <br><br>
+
+            <input type="radio" id="intramuros" name="destination" value="intramuros">
+            <label for="intramuros">Intramuros, Manila 🏰</label>
+            <br><br>
+
+            <input type="radio" id="mayon" name="destination" value="mayon">
+            <label for="mayon">Mayon Volcano, Albay 🌋</label>
+            <br><br>
+
+            <input type="radio" id="vigan" name="destination" value="vigan">
+            <label for="vigan">Calle Crisologo, Vigan 🐎</label>
+        </div>
+
+        <!-- Tour Experience Section -->
+        <div class="section">
+            <h3>Tour Package & Departure</h3>
+            <label for="departureHub">Departure Airport / Hub:</label>
+            <select id="departureHub" name="departureHub">
+                <option value="naia">Ninoy Aquino International Airport (Manila)</option>
+                <option value="mactan">Mactan-Cebu International Airport (Cebu)</option>
+                <option value="clark">Clark International Airport (Pampanga)</option>
+                <option value="davao">Francisco Bangoy International Airport (Davao)</option>
+            </select>
+        </div>
+
+        <!-- Traveler Contact Details Section -->
+        <div class="section">
+            <h3>Traveler Contact Details</h3>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Juan Dela Cruz">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="phone">Phone / WhatsApp Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+63 912 345 6789">
+        </div>
+
+        <button type="submit">Submit Contact Info</button>
+    </form>
+
+</body>
+</html>

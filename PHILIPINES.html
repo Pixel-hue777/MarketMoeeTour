@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philippines Gallery</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    color: #003049;
+    min-height: 100vh;
+    background-color: #EAE2B7;
+    background-image: linear-gradient(rgba(234, 226, 183, 0.90), rgba(234, 226, 183, 0.90)), url('https://i.pinimg.com/736x/c8/09/71/c8097107a637e8d1ab87697c52d40881.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #003049;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(252, 191, 73, 0.5);
+    font-weight: 600;
+  }
+  
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .gallery-item {
+    width: 220px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #FCBF49;
+    box-shadow: 0 8px 16px rgba(0, 48, 73, 0.25), inset 0 0 10px rgba(247, 127, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background-color: #003049;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.4);
+    z-index: 10;
+    border-color: #D62828;
+    box-shadow: 0 15px 30px rgba(0, 48, 73, 0.4), 0 0 15px #F77F00;
+  }
+</style>
+</head>
+<body>
+  <h1>Philippines (˶ᵔ ᵕ ᵔ˶)</h1>
+  <div class="gallery-container">
+    <img class="gallery-item" src="https://i.pinimg.com/736x/83/bb/6f/83bb6fe50496ca2443e676b8677ba1f7.jpg" alt="Gallery Image 1">
+    <img class="gallery-item" src="https://i.pinimg.com/1200x/5c/62/e6/5c62e63871a515a406ffc194f41e27a1.jpg" alt="Gallery Image 2">
+    <img class="gallery-item" src="https://i.pinimg.com/736x/73/36/97/733697adf7fcbabbea86365d11fb4560.jpg" alt="Gallery Image 3">
+    <img class="gallery-item" src="https://i.pinimg.com/736x/df/44/52/df4452fe57f9ee9bec29a613281120e5.jpg" alt="Gallery Image 4">
+  </div>
+</body>
+</html>
